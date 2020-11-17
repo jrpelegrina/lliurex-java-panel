@@ -162,7 +162,7 @@
                <string>Installers</string>
               </property>
               <property name="icon">
-               <iconset theme="install">
+               <iconset theme="view-list-details">
                 <normaloff>.</normaloff>.</iconset>
               </property>
              </widget>

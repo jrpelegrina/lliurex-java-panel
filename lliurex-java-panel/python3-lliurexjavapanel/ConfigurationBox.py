@@ -4,7 +4,7 @@ import os
 from PyQt5 import uic
 from PyQt5.QtGui import QIcon,QPixmap
 from PyQt5.QtCore import Qt,QEvent,QPoint,QSize
-from PyQt5.QtWidgets import QLabel, QWidget, QToolButton,QVBoxLayout,QHBoxLayout,QMenu
+from PyQt5.QtWidgets import QLabel, QWidget, QToolButton,QVBoxLayout,QHBoxLayout,QMenu,QToolTip
 
 
 from . import settings
@@ -134,10 +134,10 @@ class ConfigurationBox(QWidget):
 			action.triggered.connect(lambda chk, item=item: self.itemClicked(item,info[item]["cmd"],alternative_type))
 
 		pushbutton =QToolButton()
-		icn=QIcon.fromTheme("editor.svg")
+		icn=QIcon.fromTheme(os.path.join(settings.ICONS_THEME,"editor.svg"))
 		pushbutton.setIcon(icn)
 		pushbutton.setIconSize(QSize(16,16))
-		pushbutton.setText('...')
+		pushbutton.setToolTip(_("Click to select an option"))
 		pushbutton.clicked.connect(lambda:self.buttonPress(alternative_type))
 		pushbutton.current=False
 		pushbutton.alternative_type=alternative_type

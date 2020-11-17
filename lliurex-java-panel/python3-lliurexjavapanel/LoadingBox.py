@@ -25,6 +25,7 @@ class LoadingBox(QWidget):
         self.msgBox=self.findChild(QVBoxLayout,'msgBox')
         self.labelBox=self.findChild(QHBoxLayout,'labelBox')
         self.msgLabel=self.findChild(QLabel,'msgLabel')
+        self.msgLabel.setText(_("Checking system..."))
 
         spinner_gif=self.core.rsrc_dir+"loading.gif"
         #self.spinner=self.corewaitingSpinner.waitingSpinner()

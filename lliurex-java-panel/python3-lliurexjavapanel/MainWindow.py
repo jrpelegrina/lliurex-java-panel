@@ -3,7 +3,7 @@ import sys
 import os
 from PyQt5 import uic
 from PyQt5.QtGui import QIcon,QPixmap,QPainter
-from PyQt5.QtCore import Qt,QEvent,QTimeLine,QThread,pyqtSignal
+from PyQt5.QtCore import Qt,QEvent,QTimeLine,QThread,pyqtSignal,QSize
 from PyQt5.QtWidgets import QLabel, QWidget,QVBoxLayout,QHBoxLayout,QSizePolicy,QMainWindow,QPushButton,QStackedLayout
 
 import time
@@ -103,8 +103,15 @@ class MainWindow(QMainWindow):
 		
 		self.optionsBox=self.findChild(QHBoxLayout,'optionsBox')
 		self.installersButton=self.findChild(QPushButton,'installersButton')
+		icn=QIcon.fromTheme(os.path.join(settings.ICONS_THEME,"view-list-details.svg"))
+		self.installersButton.setIcon(icn)
+		self.installersButton.setText(_("Installers"))
 		self.installersButton.clicked.connect(lambda:self.changePanel("I"))
 		self.configurationButton=self.findChild(QPushButton,"configurationButton")
+		icn=QIcon.fromTheme(os.path.join(settings.ICONS_THEME,"configure.svg"))
+		self.configurationButton.setIcon(icn)
+		#self.configurationButton.setIconSize(QSize(16,16))
+		self.configurationButton.setText(_("Configuration Options"))
 		self.configurationButton.clicked.connect(lambda:self.changePanel("C"))
 		self.mainBox=self.findChild(QVBoxLayout,'mainBox')
 		self.bannerBox=self.findChild(QLabel,'bannerLabel')
@@ -113,6 +120,9 @@ class MainWindow(QMainWindow):
 		self.messageLabel=self.findChild(QLabel,'messageLabel')
 		self.controlsBox=self.findChild(QVBoxLayout,'controlsBox')
 		self.applyButton=self.findChild(QPushButton,'applyButton')
+		icn=QIcon.fromTheme(os.path.join(settings.ICONS_THEME,"gtk-ok.svg"))
+		self.applyButton.setIcon(icn)
+		self.applyButton.setText(_("Install"))
 		self.applyButton.clicked.connect(self.applyButtonClicked)
 		
 		self.loadingBox=self.core.loadingBox

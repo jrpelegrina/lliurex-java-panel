@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-30 14:23+0100\n"
+"POT-Creation-Date: 2020-11-17 16:40+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,52 +17,68 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: lliurex-java-panel/python3-lliurexjavapanel/configurationBox.py:55
+#: lliurex-java-panel/python3-lliurexjavapanel/MainWindow.py:152
+#: lliurex-java-panel/python3-lliurexjavapanel/MainWindow.py:162
+msgid "No Java version(s) availables detected"
+msgstr ""
+
+#: lliurex-java-panel/python3-lliurexjavapanel/MainWindow.py:165
+#: lliurex-java-panel/python3-lliurexjavapanel/MainWindow.py:175
+msgid "Installing selected Java version(s). Wait a moment..."
+msgstr ""
+
+#: lliurex-java-panel/python3-lliurexjavapanel/MainWindow.py:182
+#: lliurex-java-panel/python3-lliurexjavapanel/MainWindow.py:192
+msgid "You must select a Java version to install"
+msgstr ""
+
+#: lliurex-java-panel/python3-lliurexjavapanel/MainWindow.py:218
+#: lliurex-java-panel/python3-lliurexjavapanel/MainWindow.py:228
+msgid "Installing process has ending with errors"
+msgstr ""
+
+#: lliurex-java-panel/python3-lliurexjavapanel/MainWindow.py:220
+#: lliurex-java-panel/python3-lliurexjavapanel/MainWindow.py:230
+msgid "Installing process has ending successfully"
+msgstr ""
+
 #: lliurex-java-panel/python3-lliurexjavapanel/ConfigurationBox.py:56
 msgid "Java Control Panel. Select one tu run it"
 msgstr ""
 
-#: lliurex-java-panel/python3-lliurexjavapanel/configurationBox.py:60
 #: lliurex-java-panel/python3-lliurexjavapanel/ConfigurationBox.py:61
 msgid "Java Web Start. Alternative configured:"
 msgstr ""
 
-#: lliurex-java-panel/python3-lliurexjavapanel/configurationBox.py:66
 #: lliurex-java-panel/python3-lliurexjavapanel/ConfigurationBox.py:67
 msgid "Java Runtime Environment. Alternative configured:"
 msgstr ""
 
-#: lliurex-java-panel/python3-lliurexjavapanel/configurationBox.py:72
 #: lliurex-java-panel/python3-lliurexjavapanel/ConfigurationBox.py:73
 msgid "Firefox plugin. Alternative configured:"
 msgstr ""
 
-#: lliurex-java-panel/python3-lliurexjavapanel/mainWindow.py:140
-#: lliurex-java-panel/python3-lliurexjavapanel/MainWindow.py:152
-msgid "No Java version(s) availables detected"
-msgstr ""
-
-#: lliurex-java-panel/python3-lliurexjavapanel/mainWindow.py:151
-#: lliurex-java-panel/python3-lliurexjavapanel/MainWindow.py:165
-msgid "Installing selected Java version(s). Wait a moment..."
-msgstr ""
-
-#: lliurex-java-panel/python3-lliurexjavapanel/mainWindow.py:168
-#: lliurex-java-panel/python3-lliurexjavapanel/MainWindow.py:182
-msgid "You must select a Java version to install"
-msgstr ""
-
-#: lliurex-java-panel/python3-lliurexjavapanel/mainWindow.py:202
-#: lliurex-java-panel/python3-lliurexjavapanel/MainWindow.py:218
-msgid "Installing process has ending with errors"
-msgstr ""
-
-#: lliurex-java-panel/python3-lliurexjavapanel/mainWindow.py:204
-#: lliurex-java-panel/python3-lliurexjavapanel/MainWindow.py:220
-msgid "Installing process has ending successfully"
-msgstr ""
-
-#: lliurex-java-panel/python3-lliurexjavapanel/ConfigurationBox.py:205
 #: lliurex-java-panel/python3-lliurexjavapanel/ConfigurationBox.py:206
 msgid "Configuration changed successfully"
+msgstr ""
+
+#: lliurex-java-panel/python3-lliurexjavapanel/LoadingBox.py:28
+#: lliurex-java-panel/python3-lliurexjavapanel/LoadingBox.py:28
+msgid "Checking system..."
+msgstr ""
+
+#: lliurex-java-panel/python3-lliurexjavapanel/MainWindow.py:108
+msgid "Installers"
+msgstr ""
+
+#: lliurex-java-panel/python3-lliurexjavapanel/MainWindow.py:114
+msgid "Configuration Options"
+msgstr ""
+
+#: lliurex-java-panel/python3-lliurexjavapanel/MainWindow.py:125
+msgid "Install"
+msgstr ""
+
+#: lliurex-java-panel/python3-lliurexjavapanel/ConfigurationBox.py:140
+msgid "Click to select an option"
 msgstr ""
