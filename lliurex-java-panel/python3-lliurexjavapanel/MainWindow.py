@@ -8,6 +8,7 @@ from PyQt5.QtWidgets import QLabel, QWidget,QVBoxLayout,QHBoxLayout,QSizePolicy,
 
 import time
 import subprocess
+import pwd
 
 from . import settings
 import gettext
@@ -124,6 +125,11 @@ class MainWindow(QMainWindow):
 		self.applyButton.setIcon(icn)
 		self.applyButton.setText(_("Install"))
 		self.applyButton.clicked.connect(self.applyButtonClicked)
+		self.helpButton=self.findChild(QPushButton,'helpButton')
+		icn=QIcon.fromTheme(os.path.join(settings.ICONS_THEME,"help-whatsthis.svg"))
+		self.helpButton.setIcon(icn)
+		self.helpButton.setText(_("Help"))
+		self.helpButton.clicked.connect(self.helpButtonClicked)
 		
 		self.loadingBox=self.core.loadingBox
 		self.installersBox=self.core.installersBox
@@ -250,10 +256,33 @@ class MainWindow(QMainWindow):
 			self.configurationButton.show()
 			self.applyButton.setEnabled(True)
 			self.configurationBox.boxDelete()
+	
+	#def changePanel
+
+	def helpButtonClicked(self):
+
+		lang=os.environ["LANG"]
+		run_pkexec=False
 		
+		if "PKEXEC_UID" in os.environ:
+			run_pkexec=True
+		
+		if 'ca_ES' in lang:
+			cmd='xdg-open https://wiki.edu.gva.es/lliurex/tiki-index.php?page=LliureX-Java-Panel.'
+		else:
+			cmd='xdg-open https://wiki.edu.gva.es/lliurex/tiki-index.php?page=LliureX-Java-Panel'
 
-'''#def changePanel
+		if not run_pkexec:
+			self.fcmd="su -c '%s' $USER" %cmd
+		else:
+			user=pwd.getpwuid(int(os.environ["PKEXEC_UID"])).pw_name
+			self.fcmd="su -c '" +cmd+ "' "+ user
+			
+		os.system(self.fcmd)
 
+	#def helpButtonClicked		
+
+'''
 if __name__ == "__main__":
    
     app = QtWidgets.QApplication(sys.argv)
